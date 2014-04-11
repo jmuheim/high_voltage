@@ -14,6 +14,6 @@ desc 'Default'
 task :default => [:all]
 
 desc 'Test the engine under all supported Rails versions'
-task all: ['appraisal:install'] do |t|
-  exec 'rake appraisal spec'
+task :all do |t|
+  exec 'appraisal install && appraisal rake spec'
 end
